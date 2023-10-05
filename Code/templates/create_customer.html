@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block body %} 
+    <div>
+        <label>Employee : {{ username }}</label>
+    </div>
+    <div class="centered-form">
+        <div class="centered-form__box">
+            <h3 style="margin-left: 3px;">Profile</h3>
+            <form action="/create_customer" method="post">
+                <input type="text" autocomplete="off" autofocus name="cus_name" placeholder="Name" style="width: 220px;"><br>
+                <input type="email" autocomplete="off" name="cus_email" placeholder="Email" style="width: 220px;"><br>
+                <input type="text" autocomplete="off" name="cus_phone" placeholder="Phone Number" style="width: 220px;">
+                <input type="text" autocomplete="off" name="cus_add" placeholder="Address" style="width: 220px;"><br>
+                <input type="date" autocomplete="off" name="cus_dob" style="width: 220px;"><br>
+                <button type="submit" style="width: 245px;">Submit</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

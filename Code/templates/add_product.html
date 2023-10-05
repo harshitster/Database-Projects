@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %} 
+    <div>
+        <label>Employee : {{ username }}</label>
+    </div>
+    <div class="centered-form">
+        <div class="centered-form__box">
+            <h3 style="margin-left: 3px;">Product Info</h3>
+            <form action="/add_product" method="post">
+                <input type="text" autocomplete="off" autofocus placeholder="Product Type" name="prod_type" style="width: 220px;"><br>
+                <input type="text" autocomplete="off" placeholder="Product Name" name="prod_name" style="width: 220px;"><br>
+                <input type="text" autocomplete="off" placeholder="Product Storage" name="prod_storage" style="width: 220px;"><br>
+                <input type="text" autocomplete="off" placeholder="Product Price" name="prod_price" style="width: 220px;"><br>
+                <button type="Submit" style="width: 245px;">Submit</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

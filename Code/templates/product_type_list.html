@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %} 
+
+    <div>
+        {% for product in products %} 
+
+            <div>{{ product[0] }}</div>
+            <div>{{ product[1] }}</div>
+            <div>{{ product[2] }}</div>
+            <br>
+
+        {% endfor %}
+    </div>
+    <form action="/options" method="get">
+        <button type="submit">Continue</button>
+    </form>
+
+{% endblock %}

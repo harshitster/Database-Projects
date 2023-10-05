@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block body %} 
+    <div>
+        <label>Employee : {{ username }}</label>
+    </div>
+    
+    <div>
+        <label>Total Amount: {{ total_amount }}</label>
+    </div>
+
+    <form action="/bill_final" method="post" style="margin: 2px;">
+        <select name="payment_mode" class="select">
+            <option disabled selected>Payment</option>
+            <option value="Cash">Cash</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Debit Card">Debit Card</option>
+        </select>
+        <button type="submit">Buy</button>
+    </form>
+    <div class="centered-form" style="justify-content: flex-start; align-items: flex-start; flex-direction: column;">
+        {% for product in products %}
+            <div style="padding: 12px; background: #2294e0; border: none; color: white; font-size: 16px; width:100vw; margin: 2px;">
+                <div>{{ product[0] }}</div>
+                <div>{{ product[1] }}</div>
+                <div>{{ product[2] }}</divl>
+                <div>{{ product[3] }}</div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

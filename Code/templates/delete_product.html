@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %} 
+    <div>
+        <label>Employee : {{ username }}</label>
+    </div>
+    <div class="centered-form">
+        <div class="centered-form__box">
+            <h3 style="margin-left: 3px;">Product Info</h3>
+            <form action="/delete_product" method="post">
+                <select name="prod_type" class="select">
+                    <option disabled selected>Product Type</option>
+                    {% for product_type in product_types %} 
+                        <option value="{{ product_type }}">{{ product_type }}</option>
+                    {% endfor %}
+                </select><br>
+                <button type="submit" style="width: 245px;">Submit</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

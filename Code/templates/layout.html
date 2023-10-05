@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>Apple Database System</title>
+        <style>
+            html {
+                font-size: 16px;
+                background-color: #333333;
+            }
+
+            input {
+                font-size: 14px;
+            }
+
+            h1 {
+                margin-bottom: 16px;
+            }
+
+            body {
+                color: #333333;
+                font-family: Helvetica, Arial, sans-serif;
+            }
+
+            label {
+                display: block;
+                font-size: 14px;
+                margin-bottom: 8px;
+                color: #777;
+            }
+
+            input {
+                border: 1px solid #eeeeee;
+                padding: 12px;
+                outline: none;
+            }
+
+            button {
+                cursor: pointer;
+                padding: 12px;
+                background: #2294e0;
+                border: none;
+                color: white;
+                font-size: 16px;
+                transition: background .3s ease;
+            }
+
+            button:hover {
+                background: #2591d8;
+            }
+
+            button:disabled {
+                cursor: default;
+                background: #2294e0;
+            }
+
+            .centered-form {
+                background: #333744;
+                width: 100vw;
+                height: 100vh;   
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .centered-form__box {
+                box-shadow: 0px 0px 17px 1px #1D1F26;
+                background: #F7F7FA;
+                padding: 24px;
+                width: 250px;
+            }
+
+            .options-form__box {
+                box-shadow: 0px 0px 17px 1px #1D1F26;
+                width: 250px;               
+            }
+
+            .select {
+                width: 95%;
+                min-width: 15ch;
+                max-width: 30ch;
+                border: 1px solid var(--select-border);
+                border-radius: 0.25em;
+                padding: 0.25em 0.5em;
+                font-size: 1.25rem;
+                cursor: pointer;
+                line-height: 1.1;
+            }
+        </style>
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>

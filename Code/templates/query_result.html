@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %} 
+    <div>
+        <label>Employee : {{ username }}</label>
+    </div>
+    <div class="centered-form" style="justify-content: flex-start; align-items: flex-start; flex-direction: column;">
+        {% for query_result in query_results %}
+            <div style="padding: 12px; background: #2294e0; border: none; color: white; font-size: 16px; width: 100vw;">{{ query_result }}</div>
+        {% endfor %}
+        <form action="/options" method="post">
+            <button type="submit" style="width: 245px;">Continue</button>
+        </form>
+    </div>
+{% endblock %}

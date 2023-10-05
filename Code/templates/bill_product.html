@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %} 
+    <div>
+        <label>Employee : {{ username }}</label>
+    </div>
+    <form action="/bill_product_list" method="post">
+        <input type="number" name="prod_id" placeholder="Product ID" autocomplete="off" autofocus required>
+        <button type="submit">Continue</button>
+    </form>
+    <div class="centered-form" style="justify-content: flex-start; align-items: flex-start; flex-direction: column;">
+        {% for product in products %} 
+            <div style="padding: 12px; background: #2294e0; border: none; color: white; font-size: 16px; width:100vw; margin: 2px;">
+                <div>{{ product[0] }}</div>
+                <div>{{ product[1] }}</div>
+                <div>{{ product[2] }}</div>
+                <div>{{ product[3] }}</div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

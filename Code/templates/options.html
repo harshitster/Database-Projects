@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block body %} 
+    <div>
+        <label>Employee : {{ username }}</label>
+    </div>
+    <div class="centered-form" style="justify-content: flex-start; align-items: flex-start; flex-direction: column;">
+        <form action="/create_customer" method="get" style="margin: 2px;">
+            <button type="submit" style="width:100vw; padding: 20px;">Create Customer</button>
+        </form>
+        <form action="/validate_customer" method="get" style="margin: 2px;">
+            <button type="submit" style="width:100vw; padding: 20px;">Validate Customer</button>
+        </form>
+        <form action="/update_customer" method="get" style="margin: 2px;">
+            <button type="submit" style="width:100vw; padding: 20px;">Update Customer Details</button>
+        </form>
+        <form action="/delete_customer" method="get" style="margin: 2px;">
+            <button type="submit" style="width:100vw; padding: 20px;">Delete Customer Details</button>
+        </form>
+        <form action="/add_product" method="get" style="margin: 2px;">
+            <button type="submit" style="width:100vw; padding: 20px;">Add Product</button>
+        </form>
+        <form action="/products" method="get" style="margin: 2px;">
+            <button type="submit" style="width:100vw; padding: 20px;">Validate Product</button>
+        </form>
+        <form action="/delete_product" method="get" style="margin: 2px;">
+            <button type="submit" style="width:100vw; padding: 20px;">Delete Product</button>
+        </form><br><br><br>
+        <form action="/query" method="post" style="margin: 2px;">
+            <textarea placeholder="QUERY" name="query" style="width: 100vw; height: 25vh"></textarea>
+            <button type="submit" style="width:100vw; padding:20px;">Submit Query</button>
+        </form>
+    </div>
+{% endblock %}

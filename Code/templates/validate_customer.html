@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %} 
+    <div>
+        <label>Employee : {{ username }}</label>
+    </div>
+    <div class="centered-form">
+        <div class="centered-form__box">
+            <h3 style="margin-left: 3px;">Profile</h3>
+            <form action="/validate_customer" method="post">
+                <input type="text" name="cus_email" autocomplete="off" autofocus placeholder="Customer Email" style="width: 220px;">
+                <button type="submit" style="width: 245px;">Submit</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

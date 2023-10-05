@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block body %} 
+    <div class="centered-form">
+        <div class="centered-form__box">
+            <h2 style="margin-left: 3px;">Log In</h2>
+            <form action="/" method="post">
+                <input type="text" name="username" autocomplete="off" autofocus placeholder="Username" style="width:220px;"><br>
+                <input type="password" name="password" autocomplete="off" autofocus placeholder="Password" style="width:220px;"><br>
+                <button type="submit" style="width: 245px;">Submit</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
